@@ -1,5 +1,10 @@
 # MS PL-300 Resources
 
+## Resources Links:
+1. [Quizlet: PL-300 Microsoft Power BI Certification Exam Questions]('https://quizlet.com/815129404/pl-300-microsoft-power-bi-certification-exam-questions-flash-cards/')
+2. [Quizlet: PL - 300 Practice Questions]('https://quizlet.com/915700237/pl-300-practice-questions-flash-cards/')
+3. [Google Docs Power Bi Services]('https://docs.google.com/presentation/d/1G0phwV8Dq_2zHu6lRGc4dS4OsWlqjrtAQ_iALKvesXE/view?slide=id.g3fa0a0cc99d_0_30#slide=id.g3fa0a0cc99d_0_30')
+
 ## PL-300: Microsoft Power BI Data Analyst Associate
 ## Comprehensive Study Glossary
 
