@@ -136,7 +136,7 @@ A measure returns unexpectedly low values when placed in a table containing mult
 * **Auto date/time is disabled:** Disabling auto date/time disables automatic date hierarchy tables, but does not decrease calculated measure values across regular dimensions.
 * **The matrix visual is too large:** Canvas and visual size impact performance and display layout, but do not alter DAX measure evaluation logic.
 
-# Question 11: Dynamic Calculation Logic & Time Intelligence in Power BI
+# Question 12: Dynamic Calculation Logic & Time Intelligence in Power BI
 
 **Question:** You need to control which calculation logic is applied to a measure based on a user’s slicer selection for “LY”, “MTD”, or “QTD”. What should you use?
 
