@@ -135,3 +135,49 @@ A measure returns unexpectedly low values when placed in a table containing mult
 * **The field formatting is incorrect:** Formatting changes how numbers appear visually (e.g., currency symbols or decimal places), not their underlying numerical values.
 * **Auto date/time is disabled:** Disabling auto date/time disables automatic date hierarchy tables, but does not decrease calculated measure values across regular dimensions.
 * **The matrix visual is too large:** Canvas and visual size impact performance and display layout, but do not alter DAX measure evaluation logic.
+
+# Question 11: Dynamic Calculation Logic & Time Intelligence in Power BI
+
+**Question:** You need to control which calculation logic is applied to a measure based on a user’s slicer selection for “LY”, “MTD”, or “QTD”. What should you use?
+
+* [ ] Field parameters
+* [x] **Calculation groups**
+* [ ] Role-playing date tables
+* [ ] Synonyms
+
+---
+
+## Detailed Explanation
+
+### Primary Solution: Calculation Groups
+
+**Calculation groups** (configured via Tabular Editor in Power BI Desktop) allow you to apply reusable DAX calculation modifiers across all existing measures in your semantic model using the `SELECTEDMEASURE()` function.
+
+#### How It Works:
+1. Instead of creating explicit measures for every combination (e.g., *Sales MTD*, *Sales QTD*, *Sales LY*, *Profit MTD*, *Profit QTD*, *Profit LY*), you create a single **Calculation Group**.
+2. Inside the calculation group, you define **Calculation Items** using `SELECTEDMEASURE()`:
+   * **MTD Item:** `CALCULATE(SELECTEDMEASURE(), DATESMTD('Date'[Date]))`
+   * **QTD Item:** `CALCULATE(SELECTEDMEASURE(), DATESQTD('Date'[Date]))`
+   * **LY Item:** `CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Date'[Date]))`
+3. Placing the Calculation Group column into a report slicer allows end users to select "LY", "MTD", or "QTD" to instantly transform any measure displayed in the report's visuals.
+
+---
+
+## Comparison: Why Other Options Are Incorrect
+
+* **Field Parameters:** Used to dynamically pick which *columns or measures* to display in a visual (e.g., switching between `[Sales]` and `[Profit]`). They do not alter the underlying DAX aggregation pattern of existing measures across multiple metrics.
+* **Role-Playing Date Tables:** Used when a fact table has multiple relationship pathways to a single date table (e.g., `Order Date` vs. `Ship Date`), typically activated via `USERELATIONSHIP()`.
+* **Synonyms:** Used in Power BI Q&A feature to map natural language words and phrasing to dataset columns and tables.
+
+---
+
+## Time Intelligence Acronyms Reference
+
+In data analytics and business reporting, these acronyms represent standard cumulative and period-over-period time horizons:
+
+| Acronym | Full Form | Definition | Example (If Today is Oct 15) |
+| :--- | :--- | :--- | :--- |
+| **LY** | **Last Year** | Compares metrics against the exact matching period from the previous year. | Same date range in the prior calendar year |
+| **MTD** | **Month-to-Date** | Aggregates data from the 1st day of the current month up to the current date. | Oct 1 to Oct 15 |
+| **QTD** | **Quarter-to-Date** | Aggregates data from the 1st day of the current quarter up to the current date. | Oct 1 to Oct 15 (Start of Q4) |
+| **YTD** | **Year-to-Date** | Aggregates data from the 1st day of the current calendar/fiscal year up to the current date. | Jan 1 to Oct 15 |
