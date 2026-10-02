@@ -2,8 +2,45 @@
 
 ## Resources Links:
 1. [Quizlet: PL-300 Microsoft Power BI Certification Exam Questions](https://quizlet.com/815129404/pl-300-microsoft-power-bi-certification-exam-questions-flash-cards/)
-2. [Quizlet: PL - 300 Practice Questions]('https://quizlet.com/915700237/pl-300-practice-questions-flash-cards/')
-3. [Google Docs Power Bi Services]('https://docs.google.com/presentation/d/1G0phwV8Dq_2zHu6lRGc4dS4OsWlqjrtAQ_iALKvesXE/view?slide=id.g3fa0a0cc99d_0_30#slide=id.g3fa0a0cc99d_0_30')
+2. [Quizlet: PL - 300 Practice Questions](https://quizlet.com/915700237/pl-300-practice-questions-flash-cards/)
+3. [Google Docs with Power Bi Services](https://docs.google.com/presentation/d/1G0phwV8Dq_2zHu6lRGc4dS4OsWlqjrtAQ_iALKvesXE/view?slide=id.g3fa0a0cc99d_0_30#slide=id.g3fa0a0cc99d_0_30)
+4. DAX Evaluation Context
+    - https://youtu.be/NnSyWXLBW2U?si=2SYgeut9S5Dljvf6
+    - https://youtu.be/t_VeITuaijQ?si=yB4Jx-DEBvCNsoyH 
+5. [DAX TREATAS()](https://youtu.be/Nr-_difQ7vw?si=xgjq_NyYjtnbta1E)
+6. [Query Folding](https://youtu.be/k1T-krHlIT0?si=IVLhYAQI1ZnsUsB7)
+7. Cardinality
+    - https://youtu.be/-0GctLQhcjY?si=hezigmU18oxaH2-G
+    - https://youtu.be/sW5LoDA1ssM?si=OFIyxRvsGK9efisU 
+8. [Vertipaq](https://youtu.be/h-yVkBmEeV0?si=K99L94GI27hBS5dJ)
+9. :mega: Power BI Desktop vs Power BI Service :mega:
+    - [Short Video](https://youtu.be/M0onHJ6M0Co?si=5hMOmdizMamfTrU9)
+    - [Deep Dive](https://youtu.be/0W6zT_tNSpU?si=FcIcoqr-96lDVzu3)
+
+## Prompt for quiz generation 
+Generate an interactive quiz on any Power BI topic using your favorite Chatbot. Copy and Paste the prompt below (make sure to update the prompt's place holders):
+
+```prompt
+Act as a Microsoft Certified Power BI Data Analyst (PL-300) expert and technical curriculum designer.
+
+I want you to create a targeted PL-300 practice quiz focused strictly on the following topic:
+[INSERT TOPIC / SUBTOPIC HERE — e.g., "DAX Time Intelligence", "Power Query Transformations", "Row-Level Security (RLS)", "Data Modeling and Star Schema"]
+
+### Instructions & Guidelines:
+1. Generate [INSERT NUMBER, e.g., 10 or 15] high-quality multiple-choice questions aligned with the latest official PL-300 exam format.
+2. Structure every question clearly with:
+   - Question Scenario (realistic, business-oriented scenario)
+   - 4 Options (A, B, C, D) with realistic distractors (common anti-patterns or misconceptions)
+   - Correct Answer clearly marked
+   - Detailed Explanation breaking down *why* the correct choice is right and *why* the other options are incorrect, referencing DAX/Power BI mechanics or best practices.
+3. Include a balance of difficulty levels matching the actual exam:
+   - Conceptual understanding
+   - Practical application/scenario-based problems
+   - Syntax and function evaluation
+4. Formatting: Present the questions directly in clear Markdown.
+
+Please generate the practice quiz now.
+```
 
 ## PL-300: Microsoft Power BI Data Analyst Associate
 ## Comprehensive Study Glossary
